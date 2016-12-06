@@ -4,8 +4,9 @@ from django.http import HttpResponse
 from django.template import loader
 
 from django.template.context import RequestContext
-
 from django.views.generic import TemplateView
+from django.utils import timezone
+from .models import Post
 # Create your views here.
 
 
@@ -49,4 +50,5 @@ class AboutPageView(TemplateView):
 
 
 def post_list(request):
-    return render(request, 'alpha/post_list.html')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'alpha/post_list.html', {'posts': posts})
