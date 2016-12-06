@@ -1,25 +1,14 @@
-<html>
+{% extends 'alpha/base.html' %}
 
-    <head>
-        <meta charset="utf-8">
-        <title>Howdy!</title>
-    </head>
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                <p>published: {{ post.published_date }}</p>
+            </div>
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
 
-    <body>
-        <h1>Hody! I am learning Django!</h1>
-        <a href="about/">About Me</a>
-
-        <a href="https://djangogirls.org">Awesome tutorial</a>
-
-        <!--<ul><li>first item</li><li>second item</li></ul>-->
-
-        {% for post in posts %}
-            <div>
-                <ul><li>published: {{post.published_date}}</li></ul>
-                <h1><a href="">{{post.title}}</a> </h1>
-                <p>{{post.text|linebreaksbr}}</p>
-            </div>>
-        {% endfor %}
-    </body>
-
-</html>
