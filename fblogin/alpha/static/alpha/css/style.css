@@ -1,0 +1,10 @@
+.logged-in {
+    background: gainsboro url("../img/dog.png") no-repeat center 80px;
+}
+.logged-out {
+    background: gainsboro url("http://www.w3schools.com/css/trolltunga.jpg") no-repeat center 30px;
+    background-size: 90%;
+}
+.pull-right {
+    float:right;
+}
