@@ -6,6 +6,7 @@ __author__ = 'amanda'
 urlpatterns = [
     # ex: /alpha/
     url(r'^$', views.HomePageView.as_view()),
+    url(r'^post/', views.post_list, name='post_list'),
     url(r'^about/', views.AboutPageView.as_view()),
     # url(r'index/$', views.index, name='index'),
     # # ex: /alpha/5/

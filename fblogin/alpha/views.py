@@ -46,3 +46,7 @@ class HomePageView(TemplateView):
 
 class AboutPageView(TemplateView):
     template_name = 'alpha/about.html'
+
+
+def post_list(request):
+    return render(request, 'alpha/post_list.html')

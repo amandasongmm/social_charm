@@ -20,6 +20,7 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     # url(r'^$', 'alpha.views.home', name='home'),
+    url(r'^', include('alpha.urls')),
     url(r'^alpha/', include('alpha.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('allauth.urls')),

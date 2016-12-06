@@ -25,7 +25,9 @@ SECRET_KEY = 'p^rlq!f)v@0#hxl8+((xz9phk$@wdt87jtz*_^qyu669%(se_g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'face4research.pythonanywhere.com']
+ALLOWED_HOSTS = [u'face4research.pythonanywhere.com',
+                 u'127.0.0.1',
+                 ]
 
 
 # Application definition
