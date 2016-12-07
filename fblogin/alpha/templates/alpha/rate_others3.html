@@ -10,15 +10,28 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+ 	<script>
+ 		var id = parent.document.URL.substring(parent.document.URL.indexOf('?id='), parent.document.URL.length);
+ 		var imgIdx = id.split("=")[1];
+ 		var imgIdx_int = Math.round(imgIdx)+1;
+ 		var imgIdx_next = imgIdx_int.toString()
+ 		console.log(imgIdx)
+    </script>
 	<center>
-	<h1 style="color:#a26be5;"> Hello, Shuai!</h1>
-	<h2 style="color:#f28435;"> How socialable do you think you are? </h2>
+{#	<p><font  face="tahoma" size=4 color="#3b5998"> Hello, Shuai! </font></p>#}
+{#	<p><font  face="tahoma" size=4 color="#3b5998"> How likely do people want to make friends with this person? </p>#}
+    <h1 style="color:#a26be5;"> Hello, Shuai!  </h1>
+	<h2 style="color:#f28435;"> How likely do people want to make friends with this person? </h2>
 	<div id="status"></div>
-	<script>
-		document.getElementById('status').innerHTML = 
-			'<img src="'+'../../static/img/1'+'.jpg" height=320>'
+{#	<script>#}
+{#		document.getElementById('status').innerHTML =#}
+{#			'<img src="'+imgIdx+'.jpg" height=320>'#}
+{#	</script>#}
+    <script>
+		document.getElementById('status').innerHTML =
+			'<img src="'+'../../static/img/4'+'.jpg" height=320>'
 	</script>
+	<!-- <div><img src='shuaitang.jpg'></div> -->
 
 	<div class="stars">
 	  <form action="">
@@ -39,12 +52,23 @@
 	  </form>
 	</div>
 
-	<div><font face="tahoma" size=4 color="#F62"> less socialable </font> <font face="tahoma" size=4 color="#3b5998">&#8660;</font> <font color="#005" face="tahoma" size=4 >most socialable </div>
+	<div><font face="tahoma" size=4 color="#F62"> less likely </font> <font face="tahoma" size=4 color="#3b5998">&#8660;</font> <font color="#005" face="tahoma" size=4 >most likely </div>
 </center>
+	<div id="click"></div>
+{#	<script>#}
+{#	if (imgIdx_int < 7 ) {#}
+{#		document.getElementById('click').innerHTML =#}
+{#	    '<ul class="pager"><li><a href="#">Previous</a></li><li><a href="index1.html?id='+imgIdx_next+'">Next</a></li></ul>'#}
+{#	} else {#}
+{#		document.getElementById('click').innerHTML =#}
+{#	    '<ul class="pager"><li><a href="#">Previous</a></li><li><a href="index2.html">Next</a></li></ul>'#}
+{#	}#}
+{# 	</script>#}
     <ul class="pager">
 	    <li><a href="#">Previous</a></li>
 {#	    <li><a href="rate_people.html?id=2">Next</a></li>#}
-        <li><a href="/rate_others/1/">Next</a></li>
+        <li><a href="/rate_others/4/">Next</a></li>
  	</ul>
 </body>
 </html>
+

@@ -103,9 +103,35 @@ def result_display(request):
     return render(request, 'alpha/result_analysis.html', context=None)
 
 
-def rate_display(request):
-    return render(request, 'alpha/rate_people.html', context=None)
+# def rate_display(request):
+#     return render(request, 'alpha/rate_people.html', context=None)
 
 
 def home_page(request):
     return render(request, 'alpha/home.html', context=None)
+
+
+def self_rate(request):
+    return render(request, 'alpha/rate_self.html', context=None)
+
+
+def rate_other(request):
+    return render(request, 'alpha/rate_others.html', context=None)
+
+
+def rate_other2(request):
+    return render(request, 'alpha/rate_others2.html', context=None)
+
+
+def rate_other3(request):
+    return render(request, 'alpha/rate_others3.html', context=None)
+
+
+def rate_other4(request):
+    return render(request, 'alpha/rate_others4.html', context=None)
+
+
+def rate_other5(request):
+    return render(request, 'alpha/rate_others5.html', context=None)
+
+

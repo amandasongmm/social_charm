@@ -161,7 +161,7 @@ SITE_ID = 1
 # auth and allauth settings
 
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/self_rate/'
 
 SOCIALACCOUNT_QUERY_EMAIL = True
 SOCIALACCOUNT_PROVIDERS = {
