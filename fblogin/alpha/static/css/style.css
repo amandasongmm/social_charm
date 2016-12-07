@@ -54,6 +54,7 @@ font-family: 'Lobster', cursive;
 
 .post h1 a, .post h1 a:visited {
     color: #000000;
+<<<<<<< HEAD
 }
 
 .logged-in {
@@ -66,3 +67,6 @@ font-family: 'Lobster', cursive;
 .pull-right {
     float:right;
 }
+=======
+}
+>>>>>>> 03a447718562691fcb201c29b45b7dd70dda5895

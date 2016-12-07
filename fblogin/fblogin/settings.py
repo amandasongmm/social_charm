@@ -159,13 +159,22 @@ AUTHENTICATION_BACKENDS = (
 SITE_ID = 1
 
 # auth and allauth settings
+<<<<<<< HEAD
 LOGIN_REDIRECT_URL = '/profile/'
+=======
+LOGIN_REDIRECT_URL = '/'
+>>>>>>> 03a447718562691fcb201c29b45b7dd70dda5895
 SOCIALACCOUNT_QUERY_EMAIL = True
 SOCIALACCOUNT_PROVIDERS = {
     'facebook': {
         'SCOPE': ['email'],
+<<<<<<< HEAD
         # 'METHOD': 'js_sdk'  # instead of 'oauth2'
         'METHOD': 'oauth2',
+=======
+        'METHOD': 'js_sdk'  # instead of 'oauth2'
+        # 'METHOD': 'oauth2',
+>>>>>>> 03a447718562691fcb201c29b45b7dd70dda5895
     }
 }
 
