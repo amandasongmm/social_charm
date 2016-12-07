@@ -70,10 +70,6 @@ def profile(request):
     return render_to_response('alpha/profile_view.html', RequestContext(request))
 
 
-def result_display(request):
-    return render(request, 'alpha/result_analysis.html', context=None)
-
-
 def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)
@@ -102,3 +98,14 @@ def post_edit(request, pk):
             form = PostForm(instance=post)
         return render(request, 'alpha/post_edit.html', {'form': form})
 
+
+def result_display(request):
+    return render(request, 'alpha/result_analysis.html', context=None)
+
+
+def rate_display(request):
+    return render(request, 'alpha/rate_people.html', context=None)
+
+
+def home_page(request):
+    return render(request, 'alpha/home.html', context=None)
