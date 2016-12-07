@@ -9,11 +9,10 @@ from django.utils import timezone
 from .models import Post
 
 from django.shortcuts import render, get_object_or_404
-<<<<<<< HEAD
+
 from .forms import PostForm
 from django.shortcuts import redirect
-=======
->>>>>>> 03a447718562691fcb201c29b45b7dd70dda5895
+
 # Create your views here.
 
 
@@ -66,7 +65,6 @@ def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'alpha/post_detail.html', {'post': post})
 
-<<<<<<< HEAD
 
 def profile(request):
     return render_to_response('alpha/profile_view.html', RequestContext(request))
@@ -103,5 +101,4 @@ def post_edit(request, pk):
         else:
             form = PostForm(instance=post)
         return render(request, 'alpha/post_edit.html', {'form': form})
-=======
->>>>>>> 03a447718562691fcb201c29b45b7dd70dda5895
+

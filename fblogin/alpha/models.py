@@ -2,12 +2,12 @@ from __future__ import unicode_literals
 from allauth.socialaccount.models import SocialAccount
 import hashlib
 
-<<<<<<< HEAD
+
 # to make the user's email-verification status available to the template via request.user.profile.account_verified
-=======
 
 
->>>>>>> 03a447718562691fcb201c29b45b7dd70dda5895
+
+
 from django.contrib.auth.models import User
 from django.db import models
 from allauth.account.models import EmailAddress
@@ -18,12 +18,12 @@ try:
     from django.utils.encoding import force_text
 except ImportError:
     from django.utils.encoding import force_unicode as force_text
-<<<<<<< HEAD
+
 
 # Create your models here.
 
 # to make the user's email-verification status available to the template via request.user.profile.account_verified
-=======
+
 # Create your models here.
 
 
@@ -44,7 +44,7 @@ class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
->>>>>>> 03a447718562691fcb201c29b45b7dd70dda5895
+
 
 
 class UserProfile(models.Model):
@@ -54,12 +54,10 @@ class UserProfile(models.Model):
     def __str__(self):
         return force_text(self.user.email)
 
-<<<<<<< HEAD
-=======
+
     class Meta():
         db_table = 'user_profile'
 
->>>>>>> 03a447718562691fcb201c29b45b7dd70dda5895
     def __unicode__(self):
         return "{}'s profile".format(self.user.username)
 
