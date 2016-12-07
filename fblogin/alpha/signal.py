@@ -1,8 +1,15 @@
 from allauth.account.signals import user_signed_up, user_logged_in
+import hashlib
+from .models import UserProfile
+from django.dispatch import receiver
+import logging
+
 __author__ = 'amanda'
 
-@receiver(user_signed_up)
-def social_login_fname_lname_profilepic(sociallogin, user):
+
+@receiver(user_logged_in)
+def social_login_fname_lname_profilepic(request, response, user):
+    logging.warning('hahhahahah')
     preferred_avatar_size_pixels=256
 
     picture_url = "http://www.gravatar.com/avatar/{0}?s={1}".format(
